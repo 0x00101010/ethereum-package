@@ -124,6 +124,7 @@ def new_env_file_for_el_cl_genesis_data(
         "DataColumnSidecarSubnetCount": network_params.data_column_sidecar_subnet_count,
         "SamplesPerSlot": network_params.samples_per_slot,
         "CustodyRequirement": network_params.custody_requirement,
+        "BlobSidecarSubnetCount": network_params.blob_sidecar_subnet_count,
         "MaxBlobsPerBlock": network_params.max_blobs_per_block,
         "Preset": network_params.preset,
         "AdditionalPreloadedContracts": json.encode(

@@ -129,6 +129,8 @@ def launch(
         participant_index,
     )
 
+    plan.print(beacon_service_name)
+    plan.print(beacon_config)
     beacon_service = plan.add_service(beacon_service_name, beacon_config)
 
     beacon_http_port = beacon_service.ports[constants.HTTP_PORT_ID]

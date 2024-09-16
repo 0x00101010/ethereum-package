@@ -283,6 +283,7 @@ def input_parser(plan, input_args):
             ],
             samples_per_slot=result["network_params"]["samples_per_slot"],
             custody_requirement=result["network_params"]["custody_requirement"],
+            blob_sidecar_subnet_count=result["network_params"]["blob_sidecar_subnet_count"],
             max_blobs_per_block=result["network_params"]["max_blobs_per_block"],
             preset=result["network_params"]["preset"],
             additional_preloaded_contracts=result["network_params"][
@@ -808,6 +809,7 @@ def default_network_params():
         "data_column_sidecar_subnet_count": 128,
         "samples_per_slot": 8,
         "custody_requirement": 4,
+        "blob_sidecar_subnet_count": 6,
         "max_blobs_per_block": 6,
         "preset": "mainnet",
         "additional_preloaded_contracts": {},
@@ -842,6 +844,7 @@ def default_minimal_network_params():
         "data_column_sidecar_subnet_count": 128,
         "samples_per_slot": 8,
         "custody_requirement": 4,
+        "blob_sidecar_subnet_count": 6,
         "max_blobs_per_block": 6,
         "preset": "minimal",
         "additional_preloaded_contracts": {},

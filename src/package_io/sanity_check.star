@@ -139,6 +139,7 @@ SUBCATEGORY_PARAMS = {
         "samples_per_slot",
         "custody_requirement",
         "max_blobs_per_block",
+        "blob_sidecar_subnet_count",
         "preset",
         "additional_preloaded_contracts",
         "devnet_repo",
