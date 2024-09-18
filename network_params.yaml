@@ -2,15 +2,17 @@ participants_matrix:
   el:
     - el_type: geth
       el_image: 0x00101010/geth:blob-devnet
-      el_type: reth
+      # el_log_level: "debug"
+    - el_type: reth
       el_image: 0x00101010/reth:blob-devnet
+      # el_log_level: "debug"
   cl:
     - cl_type: prysm
       cl_image: 0x00101010/prysm:blob-devnet
-      cl_log_level: "debug"
+      # cl_log_level: "debug"
       vc_image: gcr.io/prysmaticlabs/prysm/validator:latest
     - cl_type: lighthouse
-      cl_log_level: "debug"
+      # cl_log_level: "debug"
 network_params:
   network: kurtosis
   network_id: "3151908"
@@ -44,7 +46,25 @@ network_params:
   additional_preloaded_contracts: {}
   devnet_repo: ethpandaops
   prefunded_accounts: {}
-additional_services: []
+additional_services:
+  - assertoor
+  - broadcaster
+  - tx_spammer
+  # - blob_spammer
+  - custom_flood
+  - goomy_blob
+  - el_forkmon
+  - blockscout
+  - beacon_metrics_gazer
+  - dora
+  - full_beaconchain_explorer
+  - prometheus_grafana
+  - blobscan
+  - dugtrio
+  - blutgang
+  - forky
+  - apache
+  - tracoor
 dora_params:
   image: ""
 tx_spammer_params:
