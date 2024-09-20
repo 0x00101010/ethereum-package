@@ -1,14 +1,14 @@
 participants_matrix:
   el:
     - el_type: geth
-      el_image: 0x00101010/geth:blob-devnet
+      el_image: 0x00101010/geth:blob-devnet-56
       # el_log_level: "debug"
     - el_type: reth
-      el_image: 0x00101010/reth:blob-devnet
+      el_image: 0x00101010/reth:blob-devnet-56
       # el_log_level: "debug"
   cl:
     - cl_type: prysm
-      cl_image: 0x00101010/prysm:blob-devnet
+      cl_image: 0x00101010/prysm:blob-devnet-56
       # cl_log_level: "debug"
       vc_image: gcr.io/prysmaticlabs/prysm/validator:latest
     - cl_type: lighthouse
@@ -41,8 +41,8 @@ network_params:
   data_column_sidecar_subnet_count: 128
   samples_per_slot: 8
   custody_requirement: 4
-  blob_sidecar_subnet_count: 12
-  max_blobs_per_block: 12
+  blob_sidecar_subnet_count: 6
+  max_blobs_per_block: 6
   additional_preloaded_contracts: {}
   devnet_repo: ethpandaops
   prefunded_accounts: {}
