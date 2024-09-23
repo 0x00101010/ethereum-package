@@ -67,7 +67,7 @@ dora_params:
 tx_spammer_params:
   tx_spammer_extra_args: []
 goomy_blob_params:
-  goomy_blob_args: ["combined -b 5 -t 5 --max-pending 5"]
+  goomy_blob_args: ["combined -b 6 -t 7 --max-pending 20"]
 assertoor_params:
   image: ""
   run_stability_check: false
