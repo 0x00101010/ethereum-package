@@ -1,18 +1,14 @@
-participants_matrix:
-  el:
-    - el_type: geth
-      el_image: 0x00101010/geth:blob-devnet-56
-      # el_log_level: "debug"
-    - el_type: reth
-      el_image: 0x00101010/reth:blob-devnet-56
-      # el_log_level: "debug"
-  cl:
-    - cl_type: prysm
-      cl_image: 0x00101010/prysm:blob-devnet-56
-      # cl_log_level: "debug"
-      vc_image: gcr.io/prysmaticlabs/prysm/validator:latest
-    - cl_type: lighthouse
-      # cl_log_level: "debug"
+participants:
+  - el_type: geth
+    el_image: 0x00101010/geth:blob-devnet-56
+    cl_type: lighthouse
+    count: 2
+  - el_type: geth
+    el_image: 0x00101010/geth:blob-devnet-56
+    cl_type: prysm
+    cl_image: 0x00101010/prysm:blob-devnet-56
+    vc_type: prysm
+    count: 2
 network_params:
   network: kurtosis
   network_id: "3151908"
@@ -70,7 +66,7 @@ dora_params:
 tx_spammer_params:
   tx_spammer_extra_args: []
 goomy_blob_params:
-  goomy_blob_args: []
+  goomy_blob_args: ["combined -b 5 -t 5 --max-pending 5"]
 assertoor_params:
   image: ""
   run_stability_check: false
